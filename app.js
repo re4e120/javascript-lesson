@@ -98,7 +98,7 @@ console.log(`5 を 3 で割った余りは${remainder(5, 3)}です。`);
 
 // 応用編
 // Q1
-console.log(Math.random(0, 9));
+console.log(Math.floor(Math.random() * 10));
 
 // Q2
 setTimeout(function() {
@@ -109,9 +109,9 @@ setTimeout(function() {
 let num = 3;
 if (num > 0) {
   console.log("num is greater than 0");
-}else if(num === 0){
+} else if(num === 0) {
   console.log("num is 0");
-}else{
+} else {
   console.log("num is less than 0");
 }
 
@@ -125,11 +125,11 @@ console.log(numbers);
 // Q5
 let mixed = [4, '2', 5, '8', '9', 0, 1];
 for (let i = 0; i < mixed.length; i++) {
-  if(mixed[i] % 2 === 0 && typeof mixed[i] === "number"){
+  if(mixed[i] % 2 === 0 && typeof mixed[i] === "number") {
     console.log("even");
-  }else if(mixed[i] % 2 !== 0 && typeof mixed[i] === "number"){
+  } else if (mixed[i] % 2 !== 0 && typeof mixed[i] === "number") {
     console.log("odd");
-  }else{
+  } else {
     console.log("not number");
   }
 }
