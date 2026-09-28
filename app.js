@@ -2,7 +2,7 @@
 // Q1
 let nickname =  "oreo";
 let age = 22;
-console.log(`私のニックネームは${nickname}です。年齢は${age}歳です。`);
+console.log('私のニックネームは' + nickname + 'です。年齢は' + age + '歳です。');
 
 // Q2
 let language = ["JavaScript", "PHP", "Ruby", "Python", "Go"];;
@@ -40,7 +40,12 @@ let playerList = [
 console.log(playerList[1].favorites[1]);
 
 // Q5
-const average = (playerList[0].age + playerList[1].age + playerList[2].age) / 3;
+// const average = (playerList[0].age + playerList[1].age + playerList[2].age) / 3;
+let average = 0;
+for (let i = 0; i < playerList.length; i++) {
+  average += playerList[i].age;
+}
+average = average / 3;
 console.log(`平均年齢は${average}歳です。`);
 
 // Q6
@@ -125,10 +130,8 @@ console.log(numbers);
 // Q5
 let mixed = [4, '2', 5, '8', '9', 0, 1];
 for (let i = 0; i < mixed.length; i++) {
-  if(mixed[i] % 2 === 0 && typeof mixed[i] === "number") {
-    console.log("even");
-  } else if (mixed[i] % 2 !== 0 && typeof mixed[i] === "number") {
-    console.log("odd");
+  if(typeof mixed[i] === "number") {
+    console.log(mixed[i] % 2 === 0 ? "even" : "odd");
   } else {
     console.log("not number");
   }
