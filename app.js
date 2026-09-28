@@ -41,11 +41,11 @@ console.log(playerList[1].favorites[1]);
 
 // Q5
 // const average = (playerList[0].age + playerList[1].age + playerList[2].age) / 3;
-let average = 0;
+let totalAge = 0;
 for (let i = 0; i < playerList.length; i++) {
-  average += playerList[i].age;
+  totalAge += playerList[i].age;
 }
-average = average / 3;
+let average = totalAge / playerList.length;
 console.log(`平均年齢は${average}歳です。`);
 
 // Q6
